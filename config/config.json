@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "login_form",
+    "host": "127.0.0.1",
+    "table_prefix": "",
+    "timezone": "utc"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "login_form",
+    "host": "127.0.0.1",
+    "table_prefix": "",
+    "timezone": "utc"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "login_form",
+    "host": "127.0.0.1",
+    "table_prefix": "",
+    "timezone": "utc"
+  }
+}
