@@ -1,0 +1,14 @@
+# dependencies
+# /.env
+# /server.js
+# /package.json
+# /package-lock.json
+# /yarn.lock
+# **/*.log
+# **/*.json
+# public/
+node_modules/
+# /ca_bundle_certificate.crt
+# /private.key
+# /ca.pem
+# /database_dump.sql

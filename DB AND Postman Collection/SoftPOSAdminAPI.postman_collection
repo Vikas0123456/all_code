@@ -1,0 +1,3318 @@
+{
+	"info": {
+		"_postman_id": "76763d31-e69a-4559-a4ad-51b3452765b4",
+		"name": "SoftPOSAdminAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "xusername",
+								"value": "{{xusername}}",
+								"type": "text"
+							},
+							{
+								"key": "xpassword",
+								"value": "{{xpassword}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Masters",
+			"item": [
+				{
+					"name": "Country",
+					"item": [
+						{
+							"name": "Country Add",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_name\":\"India2354\",\r\n    \"country_code\":\"INS\",\r\n    \"dial\":\"951\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/country/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"country",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Country List",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perpage\":100,\r\n    \"page\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/country/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"country",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Country Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1/jpe85W6dTjHD8YYZO7BWHQOixBYKrkDo=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/country/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"country",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Country Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX19LzZlxWZLysUlPHQNCbOkmstWCuodzqrc=\",\r\n    \"country_name\":\"Bangladesh\",\r\n    \"country_code\":\"BLD\",\r\n    \"dial\":\"91\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/country/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"country",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Country deactivated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1/IJdvvvYt7Y2jq0vVjlvvDmeIY98g6kd8=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/country/deactivate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"country",
+										"deactivate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Country activated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1/IJdvvvYt7Y2jq0vVjlvvDmeIY98g6kd8=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/country/activate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"country",
+										"activate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Country delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1/IJdvvvYt7Y2jq0vVjlvvDmeIY98g6kd8=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/country/delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"country",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "State",
+					"item": [
+						{
+							"name": "State Add",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1/C8tDxznPbpyjIylT/qc0rX8JnTcMuyCI=\",\r\n    \"state_name\":\"Maharashtra\",\r\n    \"state_code\":\"MH\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/state/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"state",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "State List",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1+KveWjdmF3dsOZHpGNPw5ubBKI15gmhic=\",\r\n    \"perpage\":17,\r\n    \"page\":2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/state/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"state",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "State Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state_id\":\"U2FsdGVkX1/783uH9uLNmq5Wu9Mo3awhoYfte8qIkUs=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/state/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"state",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "State Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1+m1IbXeFuTOalRRdwQYe0KxNvNR3R1P4Y=\",\r\n    \"state_id\":\"U2FsdGVkX1+T9kg5+jJ3LsIwHUI1KXWsCDTbSEp34B0=\",\r\n    \"state_name\":\"UTTAR PRADESH\",\r\n    \"state_code\":\"UP\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/state/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"state",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "State deactivated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state_id\":\"U2FsdGVkX1+T9kg5+jJ3LsIwHUI1KXWsCDTbSEp34B0=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/state/deactivate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"state",
+										"deactivate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "State activated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state_id\":\"U2FsdGVkX1+T9kg5+jJ3LsIwHUI1KXWsCDTbSEp34B0=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/state/activate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"state",
+										"activate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "State delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state_id\":\"U2FsdGVkX1+T9kg5+jJ3LsIwHUI1KXWsCDTbSEp34B0=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/state/delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"state",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "City",
+					"item": [
+						{
+							"name": "City Add",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1/C8tDxznPbpyjIylT/qc0rX8JnTcMuyCI=\",\r\n    \"state_id\":\"U2FsdGVkX19AVKJqR9cS5thyC/F+bMkfzQ4Nrb62lqs=\",\r\n    \"city_name\":\"Aaa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/city/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"city",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "City List",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1/OO+Xj8XPjSHZe2VjVfhy/NCxLaYV+UYw=\",\r\n    \"state_id\":\"U2FsdGVkX197/x8yYDZKk6vDgug8BqQ3aMLyY8LHc1Y=\",\r\n    \"perpage\":10,\r\n    \"page\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/city/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"city",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "City Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"city_id\":\"U2FsdGVkX19+FXtew8FPDN3RnZK1U+UaNdENw15bRTQ=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/city/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"city",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "City Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country_id\":\"U2FsdGVkX1/M9TuQYJStR8YhDuK3syv4r/05/vh3O6Q=\",\r\n    \"state_id\":\"U2FsdGVkX18ymN94vb0h3cGp4uDy5EVS2lDViQea/OE=\",\r\n    \"city_id\":\"U2FsdGVkX19+FXtew8FPDN3RnZK1U+UaNdENw15bRTQ=\",\r\n    \"city_name\":\"Ahmadnagar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/city/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"city",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "City deactivated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"city_id\":\"U2FsdGVkX19+FXtew8FPDN3RnZK1U+UaNdENw15bRTQ=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/city/deactivate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"city",
+										"deactivate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "City activated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"city_id\":\"U2FsdGVkX19+FXtew8FPDN3RnZK1U+UaNdENw15bRTQ=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/city/activate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"city",
+										"activate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "City delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"city_id\":\"U2FsdGVkX19+FXtew8FPDN3RnZK1U+UaNdENw15bRTQ=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/city/delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"city",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Designation",
+					"item": [
+						{
+							"name": "Designation Add",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation\":\"Tester11\",\r\n    \"role\":\"master,merchant\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/designation/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"designation",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Designation List",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perpage\":2,\r\n    \"page\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/designation/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"designation",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Desigantion Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation_id\":\"U2FsdGVkX1/qy3JOKRje1qsvtx52YnpJCiDBG3JFWZk=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/designation/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"designation",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Desigantion Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation_id\":\"U2FsdGVkX1+Zids2tQ0HtFTnWnOmK1b4jnN3H8QK7q4=\",\r\n    \"designation\":\"Tester11\",\r\n    \"role\":\"master,merchant\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/designation/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"designation",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Desigantion Deactivated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation_id\":\"U2FsdGVkX1+Zids2tQ0HtFTnWnOmK1b4jnN3H8QK7q4=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/designation/deactivate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"designation",
+										"deactivate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Desigantion Activated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation_id\":\"U2FsdGVkX1+Zids2tQ0HtFTnWnOmK1b4jnN3H8QK7q4=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/designation/activate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"designation",
+										"activate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Desigantion delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"designation_id\":\"U2FsdGVkX1+Zids2tQ0HtFTnWnOmK1b4jnN3H8QK7q4=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/designation/delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"designation",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Department",
+					"item": [
+						{
+							"name": "Department Add",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"department\":\"विभाग\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/department/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"department",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Department List",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perpage\":2,\r\n    \"page\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/department/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"department",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Department Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"department_id\":\"U2FsdGVkX1+1B43QxCyymOWrV3LuQLx5sQMr+FwPGnU=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/department/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"department",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Department Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"department_id\":\"U2FsdGVkX19kwqKLdzfeUkulpB5W4JIgedbQJ4QS6AQ=\",\r\n    \"department\":\"Testing1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/department/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"department",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Department Deactivated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"department_id\":\"U2FsdGVkX1+Zids2tQ0HtFTnWnOmK1b4jnN3H8QK7q4=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/department/deactivate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"department",
+										"deactivate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Department Activated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"department_id\":\"U2FsdGVkX1+Zids2tQ0HtFTnWnOmK1b4jnN3H8QK7q4=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/department/activate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"department",
+										"activate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Department delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"department_id\":\"U2FsdGVkX19kwqKLdzfeUkulpB5W4JIgedbQJ4QS6AQ=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/department/delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"department",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Language",
+					"item": [
+						{
+							"name": "Language Add",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "language",
+											"value": "hindi12",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Admin/Downloads/SoftPOSAdminAPI.postman_collection.json"
+										},
+										{
+											"key": "flag",
+											"type": "file",
+											"src": "/C:/Users/Admin/Downloads/flotResponseTimesOverTime.png"
+										},
+										{
+											"key": "direction",
+											"value": "ltr",
+											"description": "ltr,rlt",
+											"type": "default"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/language/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"language",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "language List",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perpage\":10,\r\n    \"page\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/language/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"language",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "language Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"language_id\":\"U2FsdGVkX1+aga3OKvMNu0oq8nojb5ZKVu0svgCEfKw=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/language/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"language",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Language Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "language",
+											"value": "hindi12",
+											"type": "text"
+										},
+										{
+											"key": "direction",
+											"value": "ltr",
+											"type": "text"
+										},
+										{
+											"key": "flag",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": []
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/language/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"language",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Langauge Deactivated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"language_id\":\"U2FsdGVkX18zzhVxjthZhawWGQkZw3g6fwPeqmIG8LE=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/language/deactivate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"language",
+										"deactivate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Langauge Activated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"language_id\":\"U2FsdGVkX18zzhVxjthZhawWGQkZw3g6fwPeqmIG8LE=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/language/activate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"language",
+										"activate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Langauge Delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"language_id\":\"U2FsdGVkX18zzhVxjthZhawWGQkZw3g6fwPeqmIG8LE=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/language/delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"language",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin Users",
+					"item": [
+						{
+							"name": "Admin Register",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "rahul",
+											"type": "text"
+										},
+										{
+											"key": "designation",
+											"value": "U2FsdGVkX1/eM3TZee8CGOsUraZBi1tqzRXsDz3OQzk=",
+											"type": "text"
+										},
+										{
+											"key": "department",
+											"value": "U2FsdGVkX1/bGPQxI5bFq1bRPuX74vagwOFUPNxZ5Oc=",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Nagpur",
+											"type": "text"
+										},
+										{
+											"key": "country_id",
+											"value": "U2FsdGVkX1+F2AvK4H/KPTQaqohatNJ4KWHGh7TVasw=",
+											"type": "text"
+										},
+										{
+											"key": "state_id",
+											"value": "U2FsdGVkX1+F/ANkeZzapoX3qJrUxYxOQ4IVczQqEnQ=",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "U2FsdGVkX1/81N5nD/bmirz7jWfqxWSrJ3kkuiAaoKY=",
+											"type": "text"
+										},
+										{
+											"key": "pincode",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "rahul1243211@ulistech.com",
+											"type": "text"
+										},
+										{
+											"key": "mobile_no",
+											"value": "1345115322",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Qwerty@123",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "Qwerty@123",
+											"type": "text"
+										},
+										{
+											"key": "roles",
+											"value": "add_user,edit_user,delet_user",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Admin/Downloads/flotResponseTimesOverTime.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"U2FsdGVkX18jFdhEyfmz8q1Z4mAZFGLpDouPaeVtSfA=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin list",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"perpage\":10,\r\n    \"page\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "U2FsdGVkX18jFdhEyfmz8q1Z4mAZFGLpDouPaeVtSfA=",
+											"type": "default"
+										},
+										{
+											"key": "name",
+											"value": "rahul",
+											"type": "text"
+										},
+										{
+											"key": "designation",
+											"value": "U2FsdGVkX1/eM3TZee8CGOsUraZBi1tqzRXsDz3OQzk=",
+											"type": "text"
+										},
+										{
+											"key": "department",
+											"value": "U2FsdGVkX1/bGPQxI5bFq1bRPuX74vagwOFUPNxZ5Oc=",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Nagpur",
+											"type": "text"
+										},
+										{
+											"key": "country_id",
+											"value": "U2FsdGVkX1+F2AvK4H/KPTQaqohatNJ4KWHGh7TVasw=",
+											"type": "text"
+										},
+										{
+											"key": "state_id",
+											"value": "U2FsdGVkX1+F/ANkeZzapoX3qJrUxYxOQ4IVczQqEnQ=",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "U2FsdGVkX1/81N5nD/bmirz7jWfqxWSrJ3kkuiAaoKY=",
+											"type": "text"
+										},
+										{
+											"key": "pincode",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "rahul1243211@ulistech.com",
+											"type": "text"
+										},
+										{
+											"key": "mobile_no",
+											"value": "123456789",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Qwerty@123",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "Qwerty@123",
+											"type": "text"
+										},
+										{
+											"key": "roles",
+											"value": "add_user,edit_user,delet_user",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"description": "optional",
+											"type": "file",
+											"src": "/C:/Users/Admin/Downloads/god-lord-ganesha-wallpaper-preview.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Deactivated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"U2FsdGVkX18WDM8k3rUC43MQRaAvyV+ljjGdm+zdEao=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/deactivate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"deactivate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Activated",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"U2FsdGVkX18WDM8k3rUC43MQRaAvyV+ljjGdm+zdEao=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/activate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"activate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Block",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"U2FsdGVkX18WDM8k3rUC43MQRaAvyV+ljjGdm+zdEao=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/block",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"block"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Unblocked",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"U2FsdGVkX18WDM8k3rUC43MQRaAvyV+ljjGdm+zdEao=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/unblock",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"unblock"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "xusername",
+										"value": "{{xusername}}",
+										"type": "text"
+									},
+									{
+										"key": "xpassword",
+										"value": "{{xpassword}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\":\"U2FsdGVkX18WDM8k3rUC43MQRaAvyV+ljjGdm+zdEao=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/admin/delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Merchant",
+					"item": [
+						{
+							"name": "Merchant Add",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{access_token}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "merchant_name",
+											"value": "rahul",
+											"description": "required",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "mercha456@ulistech.com",
+											"description": "required",
+											"type": "default"
+										},
+										{
+											"key": "mcode",
+											"value": "91",
+											"description": "required",
+											"type": "default"
+										},
+										{
+											"key": "mobile_no",
+											"value": "1235689345",
+											"description": "required",
+											"type": "default"
+										},
+										{
+											"key": "username",
+											"value": "Merchant1234",
+											"description": "required",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "Qwerty@123",
+											"description": "required",
+											"type": "default"
+										},
+										{
+											"key": "confirm_password",
+											"value": "Qwerty@123",
+											"description": "required",
+											"type": "default"
+										},
+										{
+											"key": "mcc_code",
+											"value": "1233-4434",
+											"description": "required (length 4-10)",
+											"type": "default"
+										},
+										{
+											"key": "merchant_category",
+											"value": "Mer_category-1",
+											"description": "required",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Merchant List",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Merchant Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "merchant_id",
+											"value": "U2FsdGVkX18wwkXvvJIi7oDg9k2IvGegRCY+bfSDZMo=",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Merchant Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "merchant_id",
+											"value": "U2FsdGVkX1/96j2v7xqCdPNb7ZI4x8bTwaqCOtlkx+Q=",
+											"type": "default"
+										},
+										{
+											"key": "merchant_name",
+											"value": "rahul",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Nagpur",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mercha456@ulistech.com",
+											"type": "text"
+										},
+										{
+											"key": "mobile_no",
+											"value": "1235689345",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "Merchant1234",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "yb78a78ga76Ga667gaga78G7A18fdjD5",
+											"type": "text"
+										},
+										{
+											"key": "mcc_code",
+											"value": "MERCO2344345",
+											"type": "text"
+										},
+										{
+											"key": "merchant_category",
+											"value": "U2FsdGVkX1/pvdOKyZNO38GFUiYcqgsvgrQ1EQpSI1g=",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Generate/Update Merchant API Key",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "merchant_id",
+											"value": "U2FsdGVkX1/usUhaLv3Oa1/jV8pAVmFeYSUDdBAN7cs=",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/apikey",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"apikey"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Merchant Category",
+					"item": [
+						{
+							"name": "Merchant Category Add",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "category_name",
+											"value": "category_name",
+											"description": "required",
+											"type": "default"
+										},
+										{
+											"key": "role",
+											"value": "master,merchant",
+											"description": "required",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/category/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"category",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Merchant Category List",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/category/list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"category",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Merchant Category Details",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "category_id",
+											"value": "U2FsdGVkX1/qZEGUXH3wFsIEIBkeFmRMQX5mzxXTvHU=",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/category/details",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"category",
+										"details"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Merchant Category Update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "category_id",
+											"value": "U2FsdGVkX1/qZEGUXH3wFsIEIBkeFmRMQX5mzxXTvHU=",
+											"type": "text"
+										},
+										{
+											"key": "category_name",
+											"value": "category_name23",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "master,merchant,add",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/merchant/category/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"merchant",
+										"category",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
